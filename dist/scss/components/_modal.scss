@@ -1,0 +1,23 @@
+.custom_modal {
+  border-radius: 0;
+  background-color: transparentize($black, 0.2);
+  box-shadow: none;
+  border: none;
+
+  .modal-header {
+    border-bottom: none;
+  }
+
+  .modal-title {
+    @extend %font--body-copy;
+    color: $text-color_inverse;
+  }
+
+  .modal-footer {
+    border-top: 1px solid $white;
+  }
+
+  .close {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,24 @@
+//PwC Digital Services color palette
+
+$white: #FFFFFF;
+$black: #000000;
+$red: #D32F2F;
+
+//typography colors
+$text-color_default: #404040;
+$text-color_inverse: $white;
+$body-copy-color_grey: #7F7F7F;
+$scroll-down-color: transparentize($white, 0.5);
+$scroll-down-color--hover: $white;
+$text-highlight-color: $red;
+$button-color: $white;
+
+//border-colors
+$border-color_a: #A2A2A2;
+$border-color_b: $red;
+
+//background-colors:
+$button-background-color: #B71C1C;
+$button-background-color--hover: $red;
+$dfa-1_background-color: #404040;
+$dfa-2_background-color: $red;

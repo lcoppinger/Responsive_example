@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Lato-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../scss/fonts/Lato-Regular.eot");
+  src: url("../scss/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../scss/fonts/Lato-Regular.woff") format("woff"), url("../scss/fonts/Lato-Regular.ttf") format("truetype"), url("../scss/fonts/Lato-Regular.svg") format("svg"); }
+
+@font-face {
+  font-family: 'Lato-Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url("../scss/fonts/Lato-Bold.eot");
+  src: url("../scss/fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../scss/fonts/Lato-Bold.woff") format("woff"), url("../scss/fonts/Lato-Bold.ttf") format("truetype"), url("../scss/fonts/Lato-Bold.svg") format("svg"); }
+
+@font-face {
+  font-family: 'Lato-Light';
+  font-style: normal;
+  font-weight: 200;
+  src: url("../scss/fonts/Lato-Light.eot");
+  src: url("../scss/fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../scss/fonts/Lato-Light.woff") format("woff"), url("../scss/fonts/Lato-Light.ttf") format("truetype"), url("../scss/fonts/Lato-Light.svg") format("svg"); }
+
+@font-face {
+  font-family: 'Slabo-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../scss/fonts/Slabo27px-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Slabo-Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url("../scss/fonts/Slabo27px-Regular.ttf") format("truetype"); }
+
+html {
+  font-size: 16px; }
+
+/*# sourceMappingURL=variables.css.map */

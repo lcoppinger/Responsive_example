@@ -1,0 +1,118 @@
+// Font-sizes
+$base-font-size: 16px; // Default Base Font Size
+$scale-factor: 1; // Change only the value for $scale-factor to change all other font sizes.
+
+html {
+  font-size: $base-font-size;
+}
+
+// Strip unit (pixel, em, rem etc.) from the vlaue
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Removing rem from the font-size value to be able to use if for calculation
+$base-font-size: strip-unit($base-font-size);
+
+// Calculate pixel in to rem function
+@function rem($pixels, $context: $base-font-size) {
+  @return (($pixels * $scale-factor) / $context) * 1rem
+}
+
+$body-copy__font-size--xs: rem(16);
+$body-copy__font-size--sm: rem(28);
+$body-copy__font-size--md: rem(20);
+$body-copy__font-size--lg: $body-copy__font-size--md;
+
+$main-heading__font-size--xs: rem(42);
+$main-heading__font-size--sm: rem(60);
+$main-heading__font-size--md: rem(64);
+$main-heading__font-size--lg: $main-heading__font-size--md;
+
+$hero-heading__font-size--xs: rem(42);
+$hero-heading__font-size--sm: rem(60);
+$hero-heading__font-size--md: rem(42);
+$hero-heading__font-size--lg: rem(56);
+
+$sub-heading__font-size--xs: rem(30);
+$sub-heading__font-size--sm: rem(32);
+$sub-heading__font-size--md: rem(30);
+$sub-heading__font-size--lg: $sub-heading__font-size--md;
+
+$button__font-size--xs: rem(14);
+$button__font-size--sm: rem(14);
+$button__font-size--md: rem(14);
+$button__font-size--lg: $button__font-size--md;
+
+
+$serif__font: 'Slabo-Regular', serif;
+$sans-serif__font: 'Lato-Regular', sans-serif;
+
+@mixin make_font_style($font-family, $font-size) {
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+%font--body-copy {
+  @include make_font_style($sans-serif__font, $body-copy__font-size--xs);
+
+  @media (min-width: $screen-sm-min) {
+    @include make_font_style($sans-serif__font, $body-copy__font-size--sm);
+  }
+
+  @media (min-width: $screen-md-min) {
+    @include make_font_style($sans-serif__font, $body-copy__font-size--md);
+  }
+}
+
+%font--main-heading {
+  @include make_font_style($serif__font, $main-heading__font-size--xs);
+
+  @media (min-width: $screen-sm-min) {
+    @include make_font_style($serif__font, $main-heading__font-size--sm);
+  }
+
+  @media (min-width: $screen-md-min) {
+    @include make_font_style($serif__font, $main-heading__font-size--md);
+  }
+}
+
+%font--hero-heading {
+  @include make_font_style($serif__font, $hero-heading__font-size--xs);
+
+  @media (min-width: $screen-sm-min) {
+    @include make_font_style($serif__font, $hero-heading__font-size--sm);
+  }
+
+  @media (min-width: $screen-md-min) {
+    @include make_font_style($serif__font, $hero-heading__font-size--md);
+  }
+
+  @media (min-width: $screen-lg-min) {
+    @include make_font_style($serif__font, $hero-heading__font-size--lg);
+  }
+}
+
+%font--sub-heading {
+  @include make_font_style($sans-serif__font, $sub-heading__font-size--xs);
+
+  @media (min-width: $screen-sm-min) {
+    @include make_font_style($serif__font, $sub-heading__font-size--sm);
+  }
+
+  @media (min-width: $screen-md-min) {
+    @include make_font_style($sans-serif__font, $sub-heading__font-size--md);
+  }
+}
+
+%font--button {
+  @include make_font_style($sans-serif__font, $button__font-size--xs);
+
+  @media (min-width: $screen-md-min) {
+    @include make_font_style($sans-serif__font, $button__font-size--md);
+  }
+}

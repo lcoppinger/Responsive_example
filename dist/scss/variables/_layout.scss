@@ -1,0 +1,90 @@
+// Pulling in old grid theme
+@import "grid";
+
+// Map with details of the Bootstrap basic grid, for reference / convenience
+$grid: ( grid__columns: 12, grid__gutter-width: 30px );
+
+// A map of the breakpoints - to be used throughout the SASS files
+$breakpoints: ( xs: 480px, sm: 768px, md: 992px, lg: 1200px );
+
+// A mixin that creates placeholders for the Bootstrap column classes by looping through the columns count for each breakpoint
+@each $breakpoint,
+$value in $breakpoints {
+  @for $i from 1 through map-get($grid, grid__columns) {
+
+    %column--#{$breakpoint}--#{$i} {
+
+      @if $breakpoint == 'xs' {
+        @include make-xs-column($i);
+      }
+
+      @else if $breakpoint == 'sm' {
+        @include make-sm-column($i);
+      }
+
+      @else if $breakpoint == 'md' {
+        @include make-md-column($i);
+      }
+
+      @else if $breakpoint == 'lg' {
+        @include make-lg-column($i);
+      }
+    }
+  }
+}
+
+// Grid structure placeholders to extend:
+
+// The point of these placeholders is to make it easier to replace the
+// Bootstrap grid if we so choose; this way we don't have to strip out Bootstrap
+// extends and includes from multiple files across the SASS, we just change
+// the implementation here instead.
+
+%container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+%container--fluid {
+  @include container-fixed;
+}
+
+%row {
+  @include make-row;
+}
+
+// Placeholder for a centered 'row' as per the 'Spacing and layout' section of the 'Styleguide' in 'DRLG Digital Assets' on confluence
+
+%section--centred {
+  @extend %column--sm--10;
+  @include make-sm-column-offset(1);
+  @extend %column--md--8;
+  @include make-md-column-offset(2);
+  @extend %column--lg--6;
+  @include make-lg-column-offset(3);
+}
+
+// Sidebar placeholders that can be extended into semantically named containers where-ever you need to use them
+
+%two-columns__sidebar {
+  @extend %column--sm--5;
+  @extend %column--md--4;
+}
+
+%two-columns__main {
+
+  @extend %column--sm--7;
+  @extend %column--md--8;
+}
+

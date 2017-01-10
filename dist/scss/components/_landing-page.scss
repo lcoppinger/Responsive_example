@@ -1,0 +1,91 @@
+.landing--page {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: table-cell;
+  vertical-align: middle;
+
+  @media(min-width: map-get($breakpoints, sm)) {
+    padding: 0;
+    display: block;
+  }
+
+  p {
+    @extend %font--body-copy;
+    font-family: $sans-serif__font;
+    font-weight: 200;
+    color: $text-color_inverse;
+    margin-bottom: 30px;
+
+    &.landing--description {
+      margin: 0;
+      margin-bottom: 20px;
+
+      @media(min-width: map-get($breakpoints, sm)) {
+        margin: 0 5% 40px;
+      }
+
+      @media(min-width: map-get($breakpoints, md)) {
+        margin: 0 10% 40px;
+      }
+    }
+
+    &.landing--disclaimer {
+      @extend %font--button;
+      margin-top: 30px;
+    }
+  }
+
+
+  .link__button {
+    @extend %font--button;
+    @extend %easing-animation;
+    background-color: $button-background-color;
+    border: none;
+    position: relative;
+    color: $text-color_inverse;
+    padding: 30px;
+    text-transform: uppercase;
+  }
+
+  .callout {
+    border: 1px solid $border-color_a;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    .section__title {
+      @extend %font--sub-heading;
+      font-family: $serif__font;
+      color: $text-color_inverse;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    @media(min-width: map-get($breakpoints, sm)) {
+      text-align: left;
+      padding: 40px 60px;
+      margin: 0;
+    }
+  }
+
+
+  @media(min-width: map-get($breakpoints, sm)) {
+    .callout-wrapper {
+      overflow: hidden;
+      padding: 0 40px;
+
+      #callout1 {
+        margin-left: 15px;
+      }
+
+      #callout2 {
+        margin-left: -30px;
+        margin-top: 60px;
+      }
+    }
+  }
+
+}
+

@@ -1,0 +1,135 @@
+
+.hero {
+  background: url(../../Images/hero-image.png) no-repeat right;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+
+
+  @media(min-width: map-get($breakpoints, sm)) {
+    background: url(../../Images/hero-image.png) no-repeat center;
+    background-size: cover;
+  }
+}
+
+.mobile--full-page {
+  display: table;
+  height: 100%;
+
+  @media(min-width: map-get($breakpoints, sm)) {
+    display: block;
+    height: auto;
+  }
+}
+
+.app--image {
+  width: 100%;
+  padding: 80px;
+  padding-top: 0;
+
+  @media(min-width: map-get($breakpoints, sm)) {
+    padding: 0;
+    width: 40%;
+  }
+
+  @media(min-width: map-get($breakpoints, md)) {
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 40px;
+  }
+
+  @media(min-width: map-get($breakpoints, lg)) {
+    padding-left: 0;
+    padding-top: 0;
+  }
+}
+
+.image--wrap {
+  @media(min-width: map-get($breakpoints, sm)) {
+    text-align: center;
+  }
+}
+
+.app--info {
+  padding: 40px;
+  text-align: center;
+
+  @media(min-width: map-get($breakpoints, sm)) {
+    padding: 40px 40px 0 40px;
+  }
+
+  @media(min-width: map-get($breakpoints, md)) {
+    text-align: left;
+    padding: 50px;
+  }
+
+  @media(min-width: map-get($breakpoints, lg)) {
+    padding: 50px 100px;
+  }
+}
+
+.dfa-1 {
+  @extend .hero;
+  background: none;
+  background-color: $dfa-1_background-color;
+  height: auto;
+
+  .body__copy {
+    color: $body-copy-color_grey;
+  }
+}
+
+.dfa-2 {
+  @extend .hero;
+  background: none;
+  background-color: $dfa-2_background-color;
+  height: auto;
+
+  .body__copy {
+    color: transparentize($text-color_inverse, 0.5);
+  }
+}
+
+.dfa-3 {
+  @extend .hero;
+  background: none;
+  background-color: $white;
+  height: auto;
+
+  .main__title {
+    color: $text-color_default;
+  }
+
+  .body__copy {
+    color: $text-color_default;
+    opacity: 0.5;
+  }
+
+  .scroll-btn {
+    color: transparentize($text-color_default, 0.5);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $text-color_default;
+    }
+  }
+}
+
+.video {
+  background: url("../../Images/template_background.png") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+
+  @media(min-width: map-get($breakpoints, sm)) {
+    padding: 10% 0;
+    height: 75%;
+  }
+
+  @media(min-width: map-get($breakpoints, md)) {
+    background-size: auto;
+    height: auto;
+  }
+}
+
+
