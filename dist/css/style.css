@@ -154,7 +154,8 @@ body {
   color: #FFFFFF;
   position: relative;
   padding: 15px 30px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 20px; }
   .download__button img {
     width: 20px;
     margin-top: -8px;
@@ -189,12 +190,12 @@ body {
   z-index: 2;
   padding: 20px; }
   .icon img {
-    width: 70%; }
+    width: 40px; }
   @media (min-width: 768px) {
     .icon {
       padding: 30px; }
       .icon img {
-        width: auto; } }
+        height: 60px; } }
 
 .main__nav {
   background-color: rgba(0, 0, 0, 0.8);
