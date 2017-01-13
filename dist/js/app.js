@@ -1,15 +1,15 @@
 
 function navigation () {
-  var navbar = $(".main__nav");
+  var navbar = $(".main--nav");
 
   $(navbar).hover(function(){
 
     if ($(this).hasClass("menu--collapse")) {
       $(this).removeClass("menu--collapse");
-      $(".side__menu").attr("aria-hidden","true");
+      $(".side--menu").attr("aria-hidden","true");
     }else {
       $(this).addClass("menu--collapse");
-      $(".side__menu").attr("aria-hidden","false");
+      $(".side--menu").attr("aria-hidden","false");
     }
 
   });
@@ -27,38 +27,38 @@ $(document).ready(function(){
 
         //using index
         if (index == 1) {
-          $(".custom__fade").removeClass("fadeOut").addClass("fadeIn");
+          $(".custom--fade").removeClass("fadeOut").addClass("fadeIn");
         } else {
-          $(".custom__fade").removeClass("fadeIn").addClass("fadeOut");
+          $(".custom--fade").removeClass("fadeIn").addClass("fadeOut");
         }
 
         if (index == 2) {
-          $(".custom__fade1").removeClass("fadeOut").addClass("fadeInUp");
+          $(".custom--fade1").removeClass("fadeOut").addClass("fadeInUp");
         } else {
-          $(".custom__fade1").removeClass("fadeInUp").addClass("fadeOut");
+          $(".custom--fade1").removeClass("fadeInUp").addClass("fadeOut");
         }
 
         if (index == 3) {
-          $(".custom__fade2").removeClass("fadeOut").addClass("fadeInUp");
+          $(".custom--fade2").removeClass("fadeOut").addClass("fadeInUp");
         } else {
-          $(".custom__fade2").removeClass("fadeInUp").addClass("fadeOut");
+          $(".custom--fade2").removeClass("fadeInUp").addClass("fadeOut");
         }
 
         if (index == 4) {
           $(".pwc-icon img").attr("src", 'Images/pwc_logo--inverse.svg');
-          $(".side__menu li").addClass("inverse");
-          $(".custom__fade3").removeClass("fadeOut").addClass("fadeInUp");
+          $(".side--menu li").addClass("inverse");
+          $(".custom--fade3").removeClass("fadeOut").addClass("fadeInUp");
 
         } else {
           $(".pwc-icon img").attr("src", 'Images/pwc_logo.svg');
-          $(".side__menu li").removeClass("inverse");
-          $(".custom__fade3").removeClass("fadeInUp").addClass("fadeOut");
+          $(".side--menu li").removeClass("inverse");
+          $(".custom--fade3").removeClass("fadeInUp").addClass("fadeOut");
         }
 
         if (index == 5) {
-          $(".custom__fade4").removeClass("fadeOut").addClass("fadeIn");
+          $(".custom--fade4").removeClass("fadeOut").addClass("fadeIn");
         } else {
-          $(".custom__fade4").removeClass("fadeIn").addClass("fadeOut");
+          $(".custom--fade4").removeClass("fadeIn").addClass("fadeOut");
         }
       }
     });
@@ -70,7 +70,7 @@ $(document).ready(function(){
     if (screen.width >= 768) {
       navigation()
     } else {
-      $(".main__nav").hide();
+      $(".main--nav").hide();
     }
   });
 
@@ -78,7 +78,7 @@ $(document).ready(function(){
     if (screen.width >= 768) {
       navigation()
     } else {
-      $(".main__nav").hide();
+      $(".main--nav").hide();
     }
   });
 
@@ -103,6 +103,5 @@ try {
   $("#QuestionPrompt").remove();
   $(".cookie").hide();
 }
-
 
 });

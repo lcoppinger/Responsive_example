@@ -1,16 +1,16 @@
-.custom_modal {
+.custom-modal {
+  background-color: transparentize($black, .2);
+  border: 0;
   border-radius: 0;
-  background-color: transparentize($black, 0.2);
   box-shadow: none;
-  border: none;
 
   .modal-header {
-    border-bottom: none;
+    border-bottom: 0;
   }
 
   .modal-title {
     @extend %font--body-copy;
-    color: $text-color_inverse;
+    color: $text-color--inverse;
   }
 
   .modal-footer {
