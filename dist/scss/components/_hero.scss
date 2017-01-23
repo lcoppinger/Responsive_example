@@ -1,13 +1,14 @@
 
-.hero {
-  background: url(../../Images/hero-image.png) no-repeat right;
+.hero,
+%hero {
+  background: url('../../Images/hero-image.png') no-repeat right;
   background-size: cover;
   height: 100vh;
   position: relative;
 
 
   @media(min-width: map-get($breakpoints, sm)) {
-    background: url(../../Images/hero-image.png) no-repeat center;
+    background: url('../../Images/hero-image.png') no-repeat center;
     background-size: cover;
   }
 }
@@ -23,9 +24,9 @@
 }
 
 .app--image {
-  width: 100%;
   padding: 80px;
   padding-top: 0;
+  width: 100%;
 
   @media(min-width: map-get($breakpoints, sm)) {
     padding: 0;
@@ -33,9 +34,9 @@
   }
 
   @media(min-width: map-get($breakpoints, md)) {
-    width: 100%;
     padding-left: 50px;
     padding-top: 40px;
+    width: 100%;
   }
 
   @media(min-width: map-get($breakpoints, lg)) {
@@ -55,12 +56,12 @@
   text-align: center;
 
   @media(min-width: map-get($breakpoints, sm)) {
-    padding: 40px 40px 0 40px;
+    padding: 40px 40px 0;
   }
 
   @media(min-width: map-get($breakpoints, md)) {
-    text-align: left;
     padding: 50px;
+    text-align: left;
   }
 
   @media(min-width: map-get($breakpoints, lg)) {
@@ -69,61 +70,61 @@
 }
 
 .dfa-1 {
-  @extend .hero;
+  @extend %hero;
   background: none;
-  background-color: $dfa-1_background-color;
+  background-color: $dfa-1--background-color;
   height: auto;
 
-  .body__copy {
-    color: $body-copy-color_grey;
+  .body--copy {
+    color: $body-copy-color--grey;
   }
 }
 
 .dfa-2 {
-  @extend .hero;
+  @extend %hero;
   background: none;
-  background-color: $dfa-2_background-color;
+  background-color: $dfa-2--background-color;
   height: auto;
 
-  .body__copy {
-    color: transparentize($text-color_inverse, 0.5);
+  .body--copy {
+    color: transparentize($text-color--inverse, .5);
   }
 }
 
 .dfa-3 {
-  @extend .hero;
+  @extend %hero;
   background: none;
   background-color: $white;
   height: auto;
 
-  .main__title {
-    color: $text-color_default;
+  .main--title {
+    color: $text-color--default;
   }
 
-  .body__copy {
-    color: $text-color_default;
-    opacity: 0.5;
+  .body--copy {
+    color: $text-color--default;
+    opacity: .5;
   }
 
   .scroll-btn {
-    color: transparentize($text-color_default, 0.5);
+    color: transparentize($text-color--default, .5);
 
     &:hover,
     &:focus,
     &:active {
-      color: $text-color_default;
+      color: $text-color--default;
     }
   }
 }
 
 .video {
-  background: url("../../Images/template_background.png") no-repeat center;
+  background: url('../../Images/template_background.png') no-repeat center;
   background-size: cover;
   height: 100vh;
 
   @media(min-width: map-get($breakpoints, sm)) {
-    padding: 10% 0;
     height: 75%;
+    padding: 10% 0;
   }
 
   @media(min-width: map-get($breakpoints, md)) {
@@ -131,5 +132,3 @@
     height: auto;
   }
 }
-
-

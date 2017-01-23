@@ -23,96 +23,96 @@ $base-font-size: strip-unit($base-font-size);
   @return (($pixels * $scale-factor) / $context) * 1rem
 }
 
-$body-copy__font-size--xs: rem(16);
-$body-copy__font-size--sm: rem(28);
-$body-copy__font-size--md: rem(20);
-$body-copy__font-size--lg: $body-copy__font-size--md;
+$body-copy--font-size--xs: rem(16);
+$body-copy--font-size--sm: rem(28);
+$body-copy--font-size--md: rem(20);
+$body-copy--font-size--lg: $body-copy--font-size--md;
 
-$main-heading__font-size--xs: rem(42);
-$main-heading__font-size--sm: rem(60);
-$main-heading__font-size--md: rem(64);
-$main-heading__font-size--lg: $main-heading__font-size--md;
+$main-heading--font-size--xs: rem(42);
+$main-heading--font-size--sm: rem(60);
+$main-heading--font-size--md: rem(64);
+$main-heading--font-size--lg: $main-heading--font-size--md;
 
-$hero-heading__font-size--xs: rem(42);
-$hero-heading__font-size--sm: rem(60);
-$hero-heading__font-size--md: rem(42);
-$hero-heading__font-size--lg: rem(56);
+$hero-heading--font-size--xs: rem(42);
+$hero-heading--font-size--sm: rem(60);
+$hero-heading--font-size--md: rem(42);
+$hero-heading--font-size--lg: rem(56);
 
-$sub-heading__font-size--xs: rem(30);
-$sub-heading__font-size--sm: rem(32);
-$sub-heading__font-size--md: rem(30);
-$sub-heading__font-size--lg: $sub-heading__font-size--md;
+$sub-heading--font-size--xs: rem(30);
+$sub-heading--font-size--sm: rem(32);
+$sub-heading--font-size--md: rem(30);
+$sub-heading--font-size--lg: $sub-heading--font-size--md;
 
-$button__font-size--xs: rem(14);
-$button__font-size--sm: rem(14);
-$button__font-size--md: rem(14);
-$button__font-size--lg: $button__font-size--md;
+$button--font-size--xs: rem(14);
+$button--font-size--sm: rem(14);
+$button--font-size--md: rem(14);
+$button--font-size--lg: $button--font-size--md;
 
 
-$serif__font: 'Slabo-Regular', serif;
-$sans-serif__font: 'Lato-Regular', sans-serif;
+$serif--font: 'Slabo-Regular', serif;
+$sans-serif--font: 'Lato-Regular', sans-serif;
 
-@mixin make_font_style($font-family, $font-size) {
+@mixin make-font-style($font-family, $font-size) {
   font-family: $font-family;
   font-size: $font-size;
 }
 
 %font--body-copy {
-  @include make_font_style($sans-serif__font, $body-copy__font-size--xs);
+  @include make-font-style($sans-serif--font, $body-copy--font-size--xs);
 
   @media (min-width: $screen-sm-min) {
-    @include make_font_style($sans-serif__font, $body-copy__font-size--sm);
+    @include make-font-style($sans-serif--font, $body-copy--font-size--sm);
   }
 
   @media (min-width: $screen-md-min) {
-    @include make_font_style($sans-serif__font, $body-copy__font-size--md);
+    @include make-font-style($sans-serif--font, $body-copy--font-size--md);
   }
 }
 
 %font--main-heading {
-  @include make_font_style($serif__font, $main-heading__font-size--xs);
+  @include make-font-style($serif--font, $main-heading--font-size--xs);
 
   @media (min-width: $screen-sm-min) {
-    @include make_font_style($serif__font, $main-heading__font-size--sm);
+    @include make-font-style($serif--font, $main-heading--font-size--sm);
   }
 
   @media (min-width: $screen-md-min) {
-    @include make_font_style($serif__font, $main-heading__font-size--md);
+    @include make-font-style($serif--font, $main-heading--font-size--md);
   }
 }
 
 %font--hero-heading {
-  @include make_font_style($serif__font, $hero-heading__font-size--xs);
+  @include make-font-style($serif--font, $hero-heading--font-size--xs);
 
   @media (min-width: $screen-sm-min) {
-    @include make_font_style($serif__font, $hero-heading__font-size--sm);
+    @include make-font-style($serif--font, $hero-heading--font-size--sm);
   }
 
   @media (min-width: $screen-md-min) {
-    @include make_font_style($serif__font, $hero-heading__font-size--md);
+    @include make-font-style($serif--font, $hero-heading--font-size--md);
   }
 
   @media (min-width: $screen-lg-min) {
-    @include make_font_style($serif__font, $hero-heading__font-size--lg);
+    @include make-font-style($serif--font, $hero-heading--font-size--lg);
   }
 }
 
 %font--sub-heading {
-  @include make_font_style($sans-serif__font, $sub-heading__font-size--xs);
+  @include make-font-style($sans-serif--font, $sub-heading--font-size--xs);
 
   @media (min-width: $screen-sm-min) {
-    @include make_font_style($serif__font, $sub-heading__font-size--sm);
+    @include make-font-style($serif--font, $sub-heading--font-size--sm);
   }
 
   @media (min-width: $screen-md-min) {
-    @include make_font_style($sans-serif__font, $sub-heading__font-size--md);
+    @include make-font-style($sans-serif--font, $sub-heading--font-size--md);
   }
 }
 
 %font--button {
-  @include make_font_style($sans-serif__font, $button__font-size--xs);
+  @include make-font-style($sans-serif--font, $button--font-size--xs);
 
   @media (min-width: $screen-md-min) {
-    @include make_font_style($sans-serif__font, $button__font-size--md);
+    @include make-font-style($sans-serif--font, $button--font-size--md);
   }
 }

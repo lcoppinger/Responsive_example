@@ -1,12 +1,10 @@
 %easing-animation {
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease;
+  transition-duration: .5s;
   transition-timing-function: ease;
 }
 
 body {
-  background-color: $dfa-1_background-color;
+  background-color: $dfa-1--background-color;
 }
 
 .mobile-hide {
@@ -17,9 +15,9 @@ body {
   }
 }
 
-.section__container {
-  max-width: 1024px;
+.section--container {
   margin: 0 auto;
+  max-width: 1024px;
   padding: 15px;
 
   @media(min-width: map-get($breakpoints, md)) {
@@ -27,46 +25,46 @@ body {
   }
 }
 
-.main__title {
+.main--title {
   @extend %font--main-heading;
-  color: $text-color_inverse;
+  color: $text-color--inverse;
   font-weight: 400;
-  padding-top: 0;
   margin: 0 5% 30px;
+  padding-top: 0;
 
   @media(min-width: map-get($breakpoints, sm)) {
     margin: 0 0 30px;
   }
 }
 
-.hero__title {
+.hero--title {
   @extend %font--hero-heading;
 }
 
-.landing__title {
-  text-align: center;
+.landing--title {
   margin-top: 30px;
+  text-align: center;
 
-  &:after {
+  &::after {
+    background-color: $border-color--b;
     content: '';
     display: block;
-    margin: 30px auto;
     height: 1px;
+    margin: 30px auto;
     width: 90px;
-    background-color: $border-color_b;
   }
 
   @media(min-width: map-get($breakpoints, sm)) {
 
-    &:after {
+    &::after {
       margin: 40px auto;
     }
   }
 }
 
-.body__copy {
+.body--copy {
   @extend %font--body-copy;
-  color: $text-color_inverse;
+  color: $text-color--inverse;
   font-weight: 200;
   margin-bottom: 40px;
 }
@@ -75,21 +73,21 @@ body {
   color: $text-highlight-color;
 }
 
-.download__button {
+.download--button {
   @extend %font--button;
   @extend %easing-animation;
   background-color: $button-background-color;
-  border: none;
-  color: $text-color_inverse;
-  position: relative;
-  padding: 15px 30px;
-  text-transform: uppercase;
+  border: 0;
+  color: $text-color--inverse;
   margin-bottom: 20px;
+  padding: 15px 30px;
+  position: relative;
+  text-transform: uppercase;
 
   img {
-    width: 20px;
-    margin-top: -8px;
     margin-left: 30px;
+    margin-top: -8px;
+    width: 20px;
   }
 
   &:hover,
@@ -107,17 +105,17 @@ body {
 
 .scroll-btn {
   @extend %easing-animation;
-  position: absolute;
   bottom: 0;
+  margin: 30px 0;
+  position: absolute;
   text-align: center;
   width: 100%;
-  margin: 30px 0;
 
   .scroll-down {
     @extend %easing-animation;
     display: block;
     margin-top: 10px;
-    opacity: 0.5;
+    opacity: .5;
 
     img {
       width: 6%;
